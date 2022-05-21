@@ -20,15 +20,10 @@ a {
 }
 
 .container {
-  max-width: 1110px;
-  width: 95%;
+  max-width: 1150px;
+  width: 100%;
+  padding: 0 20px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 997px) {
-  .container {
-    width: 97%;
-  }
 }
 
 /* --------------------------------- 
@@ -36,10 +31,14 @@ a {
 ------------------------------------- */
 
 .notification {
-  padding: 11px 30px;
+  padding: 16px 0px;
   background: #ffffff url("../images/pattern-bg.png");
   position: relative;
   color: #000;
+}
+
+.notification .container {
+  padding: 0 60px;
 }
 
 .notification__text {
@@ -49,7 +48,6 @@ a {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.01px;
-  padding: 5px 0;
   line-height: 1.5;
 }
 
@@ -127,8 +125,6 @@ a {
 ------------------------------------- */
 .utility {
   background: #0c3428 url("../images/pattern-bg.png");
-  position: relative;
-  z-index: 111;
 }
 
 .utility__content {
@@ -171,10 +167,11 @@ a {
   align-items: center;
   justify-content: center;
   background: #1b5d3c url("../images/pattern-bg.png");
-  transform: skew(-12deg);
+  clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
   padding: 8px 38px 8px 40px;
   transition: all 0.2s ease-in-out;
-  width: 151px;
+  min-width: 151px;
+  width: 100%;
 }
 
 .skewed__text {
@@ -186,19 +183,11 @@ a {
   background-color: #2b8348;
 }
 
-/* .btn--skewed:nth-child(2) {
-  margin-left: 10px;
-} */
-
 .btn--skewed:not(:last-child) {
   margin-right: 10px;
 }
 
 @media screen and (max-width: 997px) {
-  .utility {
-    padding: 0 -10px;
-  }
-
   .btn--secondary {
     padding: 8px 50px;
   }
@@ -207,7 +196,6 @@ a {
 @media screen and (max-width: 850px) {
   .utility {
     position: relative;
-    padding: 0 10px;
   }
 
   .btn--container {
@@ -327,9 +315,9 @@ a {
   background: #0f372b url("../images/pattern-bg.png");
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 7px 12px;
-  width: 255px;
+  padding: 0;
+  max-width: 255px;
+  width: 100%;
 }
 
 .input {
@@ -346,10 +334,20 @@ a {
   background: none;
   letter-spacing: 0.02px;
   color: #fff;
+  caret-color: #fff;
+  padding: 7px 12px;
 }
 
 .nav--input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.nav--input:-webkit-autofill,
+.nav--input:-webkit-autofill:hover,
+.nav--input:-webkit-autofill:focus,
+.nav--input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
 }
 
 .input-cross {
@@ -376,8 +374,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 9px 7px;
   margin: 0;
+  cursor: pointer;
 }
 
 .input-cross {
@@ -427,7 +426,7 @@ a {
 
   .nav {
     display: flex;
-    padding: 30px 20px;
+    padding: 30px 0px;
     position: absolute;
     z-index: 45;
     width: 100%;
@@ -450,6 +449,7 @@ a {
 
   .input--group {
     width: 100%;
+    max-width: 100%;
   }
 
   .input {
@@ -476,7 +476,6 @@ a {
 ------------------------------------- */
 .page--title {
   background: #248142 url("../images/pattern-bg.png");
-  position: relative;
   overflow: hidden;
 }
 
@@ -489,7 +488,6 @@ a {
 .title__text {
   font-size: 50px;
   text-transform: uppercase;
-  /* color: #fff; */
 }
 
 .title__reebok-box {
@@ -500,6 +498,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .title__logo-text {
@@ -510,7 +509,7 @@ a {
   content: "";
   position: absolute;
   background-color: #fff;
-  left: 99%;
+  left: calc(100% - 2px);
   width: 100vw;
   height: 100%;
   z-index: 3;
@@ -550,6 +549,7 @@ a {
 
 .video--box {
   position: fixed;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.8);
   height: 100%;
   width: 100%;
@@ -989,7 +989,6 @@ a {
 
 .body__content-wrapper {
   display: flex;
-  justify-content: space-between;
 }
 
 .body__content-left {
@@ -997,7 +996,8 @@ a {
 }
 
 .body__content-aside {
-  width: 23%;
+  width: 26.7%;
+  padding-left: 30px;
 }
 
 @media screen and (max-width: 1165px) {
@@ -1051,14 +1051,10 @@ a {
   }
 
   .body__content-aside {
-    width: 40%;
+    width: 100%;
+    max-width: 300px;
+    padding: 0;
     margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .body__content-aside {
-    width: 50%;
   }
 }
 
@@ -1069,6 +1065,8 @@ a {
 
   .body__content-aside {
     width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -1537,7 +1535,8 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.2fr 0.2fr 0.2fr 1fr 0.3fr;
   grid-column-gap: 28px;
-  width: 48.6%;
+  width: 100%;
+  max-width: 540px;
   margin: 14px auto;
   margin-bottom: 0;
   justify-content: center;
@@ -1581,6 +1580,15 @@ a {
   outline: none;
   width: 100%;
   font-weight: 600;
+}
+
+.form__input-group:nth-child(1) .form__input {
+  background: #fff url(../images/dropdown-arrow.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position-y: center;
+  background-position-x: right;
+  cursor: pointer;
 }
 
 .form__input-radio {
@@ -1719,24 +1727,6 @@ option {
 .form__btn:hover {
   background-color: #012c1fc0;
   color: #fff;
-}
-
-@media screen and (max-width: 1180px) {
-  .form__block {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 1180px) {
-  .form__block {
-    width: 57%;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .form__block {
-    width: 80%;
-  }
 }
 
 @media screen and (max-width: 650px) {
