@@ -27,7 +27,6 @@ a {
 /* --------------------------------- 
 ------------------ Notification Bar Styles ------------------
 ------------------------------------- */
-
 .notification {
   padding: 16px 0px;
   background: #ffffff url("../images/pattern-bg.png");
@@ -97,12 +96,8 @@ a {
     padding: 0 40px 0 20px;
   }
 
-  .notification__text {
+  .notification p {
     text-align: left;
-    word-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
     letter-spacing: -0.5px;
     font-size: 13px;
   }
@@ -115,28 +110,13 @@ a {
 /* --------------------------------- 
 ------------------ Notification Bar Styles ------------------
 ------------------------------------- */
+/* -------------------------------- Old Code-------------------------- */
 .utility {
   background: #0c3428 url("../images/pattern-bg.png");
-}
-
-.utility__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 10px 0;
 }
 
-.utility__content .utility__menu {
-  width: 25px;
-  display: none;
-  cursor: pointer;
-}
-
-.menu-close {
-  display: none;
-}
-
-.btn--container {
+.utility__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -166,11 +146,6 @@ a {
   width: 100%;
 }
 
-.skewed__text {
-  display: inline-block;
-  transform: skew(12deg);
-}
-
 .btn--skewed:hover {
   background-color: #2b8348;
 }
@@ -179,90 +154,99 @@ a {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 997px) {
-  .btn--secondary {
-    padding: 8px 50px;
-  }
+.logo {
+  display: inline-block;
 }
 
-@media screen and (max-width: 850px) {
-  .utility {
-    position: relative;
-  }
-
-  .btn--container {
-    display: none;
-  }
-
-  .utility__content .utility__menu {
-    display: block;
-  }
-
-  .utility__content .menu-btn-hide {
-    display: none;
-  }
-
-  .menu-close {
-    display: block;
-    cursor: pointer;
-  }
+.logo img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.utility--mobile {
-  background: #115634;
+.burger-icon {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
   display: none;
 }
 
-.btn--secondary {
-  background: #115634 url("../images/pattern-bg.png");
-  padding: 13px 50px;
+.burger-icon__item {
   width: 100%;
-  transition: all 0.2s ease-in-out;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
 }
 
-.btn--secondary:nth-child(1) {
-  border-right: 3px solid #fff;
+.burger-icon.burger--active .burger-icon__item:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 2px 5px;
 }
 
-.btn--secondary:hover {
-  background: #2b8348;
+.burger-icon.burger--active .burger-icon__item:nth-child(2) {
+  width: 0;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.burger-icon.burger--active .burger-icon__item:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 2px -2px;
+}
+
+.utility__btn-wrapper {
+  display: flex;
 }
 
 @media screen and (max-width: 850px) {
-  .utility--mobile {
-    display: flex;
-    box-shadow: 1px 7px 30px -6px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 7px 30px -6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 7px 30px -6px rgba(0, 0, 0, 0.75);
-    position: relative;
-    z-index: 191;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 640px) {
   .utility {
-    padding: 0 10px 5px 10px;
+    padding: 10px 0 0 0;
+    position: relative;
+    z-index: 1;
   }
 
-  .btn--secondary {
-    width: 100%;
-    padding: 8px 20px;
+  .utility__content {
+    flex-wrap: wrap;
+  }
+
+  .utility__btn-wrapper {
+    margin: 10px -20px 0;
+    width: calc(100% + 40px);
+    box-shadow: 1px 1px 20px #2c4438;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
+
+  .btn--skewed {
+    min-width: unset;
+    padding: 8px 15px;
+    margin: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .btn--skewed:not(:last-child) {
+    margin-right: 0px;
+    border-right: 3px solid #fff;
   }
 }
 
 /* --------------------------------- 
 ------------------ Navbar Styles ------------------
 ------------------------------------- */
-.nav {
-  position: relative;
-  background: #1b5d3c url("../images/pattern-bg.png");
-}
 
-.nav--sticky {
+.header {
   position: sticky;
   top: 0px;
   z-index: 111;
+}
+
+.nav {
+  background: #1b5d3c url("../images/pattern-bg.png");
 }
 
 .nav__content {
@@ -271,54 +255,48 @@ a {
   align-items: center;
 }
 
-.list {
-  text-transform: uppercase;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .nav__links {
   display: flex;
   margin: 0;
 }
 
-.nav__link-item {
-  transform: skew(-12deg);
-  padding: 17px 29px;
+.nav__links li {
   letter-spacing: 0.7px;
   cursor: pointer;
   font-size: 18px;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
 }
 
-.nav__link-item a {
+.nav__links li a {
+  padding: 17px 25px;
   text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
 }
 
-.nav__link-item:hover {
+.nav__links li a:hover {
   background: #2a8347 url("../images/pattern-bg.png");
 }
 
-.input--group {
+.list {
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.nav-form {
   background: #0f372b url("../images/pattern-bg.png");
   display: flex;
   align-items: center;
   padding: 0;
   max-width: 255px;
   width: 100%;
+  justify-content: space-between;
+  margin-left: 10px;
 }
 
-.input {
+.nav-form__input {
   border: 0;
-  outline: 0;
-  width: 86%;
-}
-
-.nav--input {
+  outline: none;
   font-family: "Oswald";
   font-size: 17px;
   font-weight: 400;
@@ -328,138 +306,79 @@ a {
   color: #fff;
   caret-color: #fff;
   padding: 7px 12px;
+  width: 100%;
 }
 
-.nav--input::placeholder {
+.nav-form__input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.nav--input:-webkit-autofill,
-.nav--input:-webkit-autofill:hover,
-.nav--input:-webkit-autofill:focus,
-.nav--input:-webkit-autofill:active {
+.nav-form__input:-webkit-autofill,
+.nav-form__input:-webkit-autofill:hover,
+.nav-form__input:-webkit-autofill:focus,
+.nav-form__input:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: #fff !important;
 }
 
-.input-cross {
-  cursor: pointer;
-  margin-right: 4px;
-}
-
-.input-hide {
-  display: none;
-}
-
-.input-show {
-  display: block;
-}
-
-.input__search {
-  cursor: pointer;
-  margin-right: 4px;
-}
-
-.input__search-btn {
+.nav-form__search {
   background: none;
-  border: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 9px 7px;
-  margin: 0;
+  outline: none;
+  border: none;
+  padding: 15px 20px;
   cursor: pointer;
+  background-image: url("../images/search-icon.png");
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
-.input-cross {
-  opacity: 0.6;
-}
-
-@media screen and (max-width: 1030px) {
-  .nav__link-item {
+@media screen and (max-width: 980px) {
+  .nav__links li a {
     font-size: 16px;
-  }
-
-  .nav__content {
-    margin-left: -10px;
-  }
-
-  .nav--input {
-    font-size: 16px;
-  }
-
-  .nav__link-item {
-    padding: 17.5px 20px;
-  }
-
-  .input--group {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 997px) {
-  .input--group {
-    width: 26.5%;
-  }
-
-  .nav__links {
-    margin-left: 10px;
-  }
-
-  .nav__link-item {
-    padding: 17.5px 18.7px;
+    padding: 17px 15px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .nav--wrapper {
-    position: relative;
-  }
-
   .nav {
-    display: flex;
-    padding: 30px 0px;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
     position: absolute;
-    z-index: 45;
     width: 100%;
-    height: 1000vh;
   }
 
-  .nav__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 25px;
+  .nav.nav--active {
+    height: 100vh;
+    padding: 30px 0;
+    opacity: 1;
   }
 
   .nav__content {
-    display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
-    justify-content: flex-start;
   }
 
-  .input--group {
-    width: 100%;
+  .nav__links {
+    flex-direction: column;
+  }
+
+  .nav__links li {
+    clip-path: polygon(0% 0%, 94% 0%, 84% 100%, 0% 100%);
+  }
+
+  .nav__links li a {
+    font-size: 16px;
+    padding: 17px 30px 17px 25px;
+  }
+
+  .nav-form {
+    margin: 0;
+    margin-bottom: 20px;
     max-width: 100%;
-  }
-
-  .input {
-    width: 100%;
-  }
-
-  .nav__link-item {
-    display: block;
-    transform: skew(0deg);
-    clip-path: polygon(0 0, 100% 0%, 88% 100%, 0% 100%);
-  }
-
-  .nav__link-item a {
-    transform: skew(0deg);
-  }
-
-  .active {
-    display: none;
   }
 }
 

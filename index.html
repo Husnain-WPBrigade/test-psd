@@ -21,111 +21,91 @@
     <!-----------------------------------
           ----------------------- Header -------------------
       ------------------------------------------------->
-    <header class="nav--sticky">
-      <div class="notification">
-        <div class="container">
-          <p>
-            LIVE RACE STREAM FROM GATOR NATIONALS IN SARASOTA, FL /
-            <a href="#">WATCH NOW</a>
-          </p>
-          <span class="close--container">
-            <img src="assets/images/x-mark.png" alt="close-icon" />
-          </span>
+
+    <header class="header">
+      <div class="header__content">
+        <div class="notification">
+          <div class="container">
+            <p>
+              LIVE RACE STREAM FROM GATOR NATIONALS IN SARASOTA, FL /
+              <a href="#">WATCH NOW</a>
+            </p>
+            <span class="close--container">
+              <img src="assets/images/x-mark.png" alt="close-icon" />
+            </span>
+          </div>
         </div>
-      </div>
 
-      <div class="utility">
-        <div class="container">
-          <div class="utility__content">
-            <a href="#">
-              <img src="assets/images/logo.png" alt="logo" />
-            </a>
-
-            <img
-              class="utility__menu"
-              src="assets/images/burger-icon.png"
-              alt="hamburger-icon"
-            />
-            <img
-              class="menu-close menu-btn-hide"
-              src="assets/images/menu-close-icon.png"
-              alt="hamburger-icon"
-            />
-
-            <div class="btn--container">
-              <button class="btn btn--skewed">Membership</button>
-              <button class="btn btn--skewed">Account</button>
+        <div class="utility">
+          <div class="container">
+            <div class="utility__content">
+              <div class="utility__logo-box">
+                <a href="/" class="logo"
+                  ><img src="assets/images/logo.png" alt=""
+                /></a>
+              </div>
+              <div class="burger-icon">
+                <div class="burger-icon__item"></div>
+                <div class="burger-icon__item"></div>
+                <div class="burger-icon__item"></div>
+              </div>
+              <div class="utility__btn-wrapper">
+                <button class="btn btn--skewed">Membership</button>
+                <button class="btn btn--skewed">Account</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="utility--mobile hide-for-desktop">
-        <button class="btn btn--secondary">Membership</button>
-        <button class="btn btn--secondary">Account</button>
+
+        <nav class="nav">
+          <div class="container">
+            <div class="nav__content">
+              <ul class="list nav__links">
+                <li class="nav__link-item">
+                  <a href="#">Our Tracks</a>
+                </li>
+                <li class="nav__link-item">
+                  <a href="#">Find Eevents</a>
+                </li>
+                <li class="nav__link-item">
+                  <a href="#">Track Map</a>
+                </li>
+                <li class="nav__link-item">
+                  <a href="#">Shop</a>
+                </li>
+                <li class="nav__link-item">
+                  <a href="#">About Us</a>
+                </li>
+              </ul>
+              <form class="nav-form" id="input--search" action="#">
+                <input
+                  type="text"
+                  class="nav-form__input"
+                  id="search-input"
+                  placeholder="Search"
+                  autocomplete="on"
+                />
+                <button type="submit" class="nav-form__search"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
 
-      <nav class="nav active">
-        <div class="container">
-          <div class="nav__content">
-            <ul class="list nav__links">
-              <li class="nav__link-item">
-                <a href="#" class="skewed__text">Our Tracks</a>
-              </li>
-              <li class="nav__link-item">
-                <a href="#" class="skewed__text">Find Eevents</a>
-              </li>
-              <li class="nav__link-item">
-                <a href="#" class="skewed__text">Track Map</a>
-              </li>
-              <li class="nav__link-item">
-                <a href="#" class="skewed__text">Shop</a>
-              </li>
-              <li class="nav__link-item">
-                <a href="#" class="skewed__text">About Us</a>
-              </li>
-            </ul>
-            <form class="input--group" id="input--search" action="#">
-              <input
-                type="text"
-                class="input nav--input"
-                id="search-input"
-                placeholder="Search"
-                autocomplete="on"
-              />
-              <button type="submit" class="input__search-btn">
-                <div class="input__search">
-                  <img
-                    class="input-search"
-                    src="assets/images/search-icon.png"
-                    alt="Search"
-                  />
-                  <img
-                    class="input-cross input-hide"
-                    src="assets/images/x-mark.png"
-                    alt="x-mark"
-                  />
-                </div>
-              </button>
-            </form>
+      <div class="page--title">
+        <div class="container title__content">
+          <h2 class="title__text">Home Page</h2>
+          <div class="title__reebok-box">
+            <span class="skewed__text title__logo-text">Partnership by</span>
+            <img
+              src="assets/images/reebok-logo.png"
+              class="skewed__text"
+              alt=""
+            />
           </div>
         </div>
-      </nav>
-    </header>
-
-    <!--------------------------------------- Title Component  --------------------------------------------------->
-    <div class="page--title">
-      <div class="container title__content">
-        <h2 class="title__text">Home Page</h2>
-        <div class="title__reebok-box">
-          <span class="skewed__text title__logo-text">Partnership by</span>
-          <img
-            src="assets/images/reebok-logo.png"
-            class="skewed__text"
-            alt=""
-          />
-        </div>
       </div>
-    </div>
+    </header>
 
     <!-----------------------------------
           ----------------------- Hero - Section -------------------
