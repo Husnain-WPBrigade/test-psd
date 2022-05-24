@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Adidas | Landing Page</title>
   </head>
@@ -20,9 +24,9 @@
     <header class="nav--sticky">
       <div class="notification">
         <div class="container">
-          <p class="notification__text">
+          <p>
             LIVE RACE STREAM FROM GATOR NATIONALS IN SARASOTA, FL /
-            <a href="#" class="notification__link">WATCH NOW</a>
+            <a href="#">WATCH NOW</a>
           </p>
           <span class="close--container">
             <img src="assets/images/x-mark.png" alt="close-icon" />
@@ -80,7 +84,7 @@
                 <a href="#" class="skewed__text">About Us</a>
               </li>
             </ul>
-            <form class="input--group" id="input--search">
+            <form class="input--group" id="input--search" action="#">
               <input
                 type="text"
                 class="input nav--input"
@@ -111,7 +115,7 @@
     <!--------------------------------------- Title Component  --------------------------------------------------->
     <div class="page--title">
       <div class="container title__content">
-        <span class="title__text">Home Page</span>
+        <h2 class="title__text">Home Page</h2>
         <div class="title__reebok-box">
           <span class="skewed__text title__logo-text">Partnership by</span>
           <img
@@ -146,105 +150,85 @@
           ></iframe>
         </div>
       </div>
-      <div class="">
-        <div class="swiper hero__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="assets/images/hero-bg.png" alt="hero-background" />
-              <div class="slider__content container">
-                <div class="slider__content-text">
-                  <h1 class="hero__title">GET READY for New Adidas bands</h1>
-                  <p class="hero__description">
-                    Adidas tracks all begin with a starting gate and end with a
-                    finish line, but everything in between varies from track to
-                    track. Because no two tracks are alike, this action sport
-                    keeps you on your toes wherever you are racing.
-                  </p>
-                </div>
-                <div class="slider__content-shoe">
-                  <img
-                    src="assets/images/video-thumbnail-img.png"
-                    alt="shoe-image"
-                  />
-                  <div class="play__icon-container play-video" id="play-video">
-                    <img src="assets/images/play-icon.png" alt="" />
+
+      <div class="hero-slider">
+        <div class="swiper hero-slider__swiper">
+          <div class="swiper-wrapper hero-slider__wrapper">
+            <div class="swiper-slide hero-slider__slide">
+              <div
+                class="hero-content"
+                style="
+                  background-image: url('assets/images/hero-bg.png'),
+                    url('assets/images/pattern-bg.png');
+                "
+              >
+                <div class="container hero-content__wrapper">
+                  <div class="hero-content__text">
+                    <h1 class="hero-slider__title">
+                      GET READY FOR NEW ADIDAS BANDS
+                    </h1>
+                    <p class="hero-slider__description">
+                      Adidas tracks all begin with a starting gate and end with
+                      a finish line, but everything in between varies from track
+                      to track. Because no two tracks are alike, this action
+                      sport keeps you on your toes wherever you are racing.
+                    </p>
+                  </div>
+                  <div class="hero-content__shoe">
+                    <img
+                      src="assets/images/video-thumbnail-img.png"
+                      alt="shoe-image"
+                    />
+                    <div
+                      class="play__icon-container play-video"
+                      id="play-video"
+                    >
+                      <img src="assets/images/play-icon.png" alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <img src="assets/images/hero-bg.png" alt="hero-background" />
-              <div class="slider__content container">
-                <div class="slider__content-text">
-                  <h1 class="hero__title">GET READY for New Adidas bands</h1>
-                  <p class="hero__description">
-                    Adidas tracks all begin with a starting gate and end with a
-                    finish line, but everything in between varies from track to
-                    track. Because no two tracks are alike, this action sport
-                    keeps you on your toes wherever you are racing.
-                  </p>
-                </div>
-                <div class="slider__content-shoe">
-                  <img
-                    src="assets/images/video-thumbnail-img.png"
-                    alt="shoe-image"
-                  />
-                  <div class="play__icon-container play-video" id="play-video">
-                    <img src="assets/images/play-icon.png" alt="" />
+
+            <div class="swiper-slide hero-slider__slide">
+              <div
+                class="hero-content"
+                style="
+                  background-image: url('assets/images/hero-bg.png'),
+                    url('assets/images/pattern-bg.png');
+                "
+              >
+                <div class="container hero-content__wrapper">
+                  <div class="hero-content__text">
+                    <h1 class="hero-slider__title">
+                      GET READY FOR NEW ADIDAS BANDS
+                    </h1>
+                    <p class="hero-slider__description">
+                      Adidas tracks all begin with a starting gate and end with
+                      a finish line, but everything in between varies from track
+                      to track. Because no two tracks are alike, this action
+                      sport keeps you on your toes wherever you are racing.
+                    </p>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/images/hero-bg.png" alt="hero-background" />
-              <div class="slider__content container">
-                <div class="slider__content-text">
-                  <h1 class="hero__title">GET READY for New Adidas bands</h1>
-                  <p class="hero__description">
-                    Adidas tracks all begin with a starting gate and end with a
-                    finish line, but everything in between varies from track to
-                    track. Because no two tracks are alike, this action sport
-                    keeps you on your toes wherever you are racing.
-                  </p>
-                </div>
-                <div class="slider__content-shoe">
-                  <img
-                    src="assets/images/video-thumbnail-img.png"
-                    alt="shoe-image"
-                  />
-                  <div class="play__icon-container play-video">
-                    <img src="assets/images/play-icon.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/images/hero-bg.png" alt="hero-background" />
-              <div class="slider__content container">
-                <div class="slider__content-text">
-                  <h1 class="hero__title">GET READY for New Adidas bands</h1>
-                  <p class="hero__description">
-                    Adidas tracks all begin with a starting gate and end with a
-                    finish line, but everything in between varies from track to
-                    track. Because no two tracks are alike, this action sport
-                    keeps you on your toes wherever you are racing.
-                  </p>
-                </div>
-                <div class="slider__content-shoe">
-                  <img
-                    src="assets/images/video-thumbnail-img.png"
-                    alt="shoe-image"
-                  />
-                  <div class="play__icon-container play-video">
-                    <img src="assets/images/play-icon.png" alt="" />
+                  <div class="hero-content__shoe">
+                    <img
+                      src="assets/images/video-thumbnail-img.png"
+                      alt="shoe-image"
+                    />
+                    <div
+                      class="play__icon-container play-video"
+                      id="play-video"
+                    >
+                      <img src="assets/images/play-icon.png" alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-button-next hero__slider-arrow-next"></div>
-          <div class="swiper-button-prev hero__slider-arrow-prev"></div>
-          <div class="swiper-pagination hero__slider-pagination"></div>
+          <div class="swiper-button-next hero-slider__next"></div>
+          <div class="swiper-button-prev hero-slider__prev"></div>
+          <div class="swiper-pagination hero-slider__pagination"></div>
         </div>
       </div>
     </section>
@@ -253,35 +237,38 @@
         ------------------------------------ Main Body ------------------------------  
         -------------------------------------------------------------------------------------->
     <main>
-      <section class="body__content">
-        <div class="container body__content-wrapper">
-          <div class="body__content-left">
-            <div class="card__slider-block">
-              <div class="swiper card__slider">
-                <div class="swiper-wrapper card-swiper-container">
-                  <div class="swiper-slide">
-                    <img src="assets/images/thubnail-slider-img.png" alt="" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/images/thubnail-slider-img.png" alt="" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/images/thubnail-slider-img.png" alt="" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/images/thubnail-slider-img.png" alt="" />
+      <section class="body-content">
+        <div class="container body-content__wrapper">
+          <div class="body-content__left">
+            <section class="card-slider">
+              <div class="card__slider-block">
+                <div class="swiper card__slider">
+                  <div class="swiper-wrapper card-swiper-container">
+                    <div class="swiper-slide">
+                      <img src="assets/images/thubnail-slider-img.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/images/thubnail-slider-img.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/images/thubnail-slider-img.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/images/thubnail-slider-img.png" alt="" />
+                    </div>
                   </div>
                 </div>
+                <div class="swiper-pagination card__slider-pagination"></div>
+                <div
+                  class="swiper-button-next card__slider-arrow card__next"
+                ></div>
+                <div
+                  class="swiper-button-prev card__slider-arrow card__prev"
+                ></div>
               </div>
-              <div class="swiper-pagination card__slider-pagination"></div>
-              <div
-                class="swiper-button-next card__slider-arrow card__next"
-              ></div>
-              <div
-                class="swiper-button-prev card__slider-arrow card__prev"
-              ></div>
-            </div>
+            </section>
             <hr class="slider__bottom-line" />
+
             <!--------------------------------------------------- Post Card Block --------------------------------------------------->
             <div class="card__block">
               <div class="post__card">
@@ -369,7 +356,7 @@
             </div>
           </div>
           <!----------------------------------------- Events Block ------------------------------------->
-          <aside class="body__content-aside">
+          <aside class="body-content__aside">
             <div class="event__card">
               <div class="event__card-header">
                 <h3 class="events__title">Events</h3>
@@ -417,113 +404,114 @@
         </div>
       </section>
       <!--------------------------------------- Form Section  ----------------------------------------------->
-      <section class="form__section">
+      <section class="form-section">
         <div class="container">
-          <h2 class="form__title">Get in touch with us</h2>
-          <form class="form__block">
-            <div class="form__input-group">
-              <label class="input__name" for="name">name</label>
+          <div class="form-section__content">
+            <h2 class="form-section__title">Get in touch with us</h2>
 
-              <input
-                class="form__input"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter name"
-              />
-            </div>
-            <div class="form__input-group">
-              <label class="input__name" for="email">Email</label>
+            <form class="form" action="#">
+              <div class="input-group">
+                <label class="input--label" for="name">name</label>
+                <input
+                  class="input-group__input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter name"
+                />
+              </div>
 
-              <input
-                class="form__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter email"
-              />
-            </div>
-            <div class="form__input-group">
-              <label class="input__name dropdown__input-name" for="country"
-                >Country</label
-              >
+              <div class="input-group">
+                <label class="input--label" for="email">Email</label>
+                <input
+                  class="input-group__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
 
-              <select
-                class="form__input dropdown__input"
-                id="country"
-                name="country"
-              >
-                <option value="USA">USA</option>
-                <option value="UK">UK</option>
-                <option value="Africa">Africa</option>
-                <option value="Egypt">Egypt</option>
-              </select>
-            </div>
-            <div class="form__input-group">
-              <label class="input__name dropdown__input-name" for="state"
-                >State</label
-              >
+              <div class="input-group">
+                <label class="input--label" for="country">Country</label>
+                <select
+                  class="input-group__input input--dropdown"
+                  id="country"
+                  name="country"
+                >
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Africa">Africa</option>
+                  <option value="Egypt">Egypt</option>
+                </select>
+              </div>
 
-              <select
-                class="form__input dropdown__input"
-                id="state"
-                name="state"
-              >
-                <option value="USA">USA</option>
-                <option value="UK">UK</option>
-                <option value="Africa">Africa</option>
-                <option value="Egypt">Egypt</option>
-              </select>
-            </div>
-            <div class="form__input-group form__gender-block">
-              <label class="input__name" for="gender">Gender</label>
-              <br />
-              <div class="form__input-gender">
-                <div class="input__radio-group">
-                  <input
-                    class="form__radio-btn"
-                    checked
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    value="male"
-                  />
-                  <label class="radio__label" for="male">Male</label>
-                </div>
-                <div class="input__radio-group">
-                  <input
-                    class="form__radio-btn"
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    value="female"
-                  />
-                  <label class="radio__label" for="female">Female</label>
-                </div>
-                <div class="input__radio-group">
-                  <input
-                    class="form__radio-btn"
-                    type="radio"
-                    name="gender"
-                    id="other"
-                    value="other"
-                  />
-                  <label class="radio__label" for="other">Other</label>
+              <div class="input-group">
+                <label class="input--label" for="state">State</label>
+                <select
+                  class="input-group__input input--dropdown"
+                  id="state"
+                  name="state"
+                >
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Africa">Africa</option>
+                  <option value="Egypt">Egypt</option>
+                </select>
+              </div>
+
+              <div class="input-group input-radio-wrapper">
+                <span class="input--label">Gender</span>
+                <div class="input-radio-box">
+                  <div class="input-group--radio">
+                    <input
+                      class="input--radio"
+                      checked
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                    />
+                    <label class="input--label" for="male">Male</label>
+                  </div>
+
+                  <div class="input-group--radio">
+                    <input
+                      class="input--radio"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                    />
+                    <label class="input--label" for="female">Female</label>
+                  </div>
+
+                  <div class="input-group--radio">
+                    <input
+                      class="input--radio"
+                      type="radio"
+                      name="gender"
+                      id="other"
+                      value="other"
+                    />
+                    <label class="input--label" for="other">Other</label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="form__input-group input__textarea">
-              <label class="input__name" for="message">Message</label>
-              <textarea
-                class="form__input form__input-textarea"
-                name="message"
-                form="usrform"
-                id="message"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <input class="btn form__btn" type="submit" value="Submit" />
-          </form>
+
+              <div class="input-group input-group--textarea">
+                <label class="input--label" for="message">Message</label>
+                <textarea
+                  class="input-group__input input--textarea"
+                  name="message"
+                  form="usrform"
+                  id="message"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <input class="btn form__btn" type="submit" value="Submit" />
+            </form>
+          </div>
         </div>
       </section>
     </main>

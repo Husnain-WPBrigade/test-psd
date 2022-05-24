@@ -55,18 +55,20 @@ videoCloseBtn.addEventListener("click", () => {
   videoBox.classList.remove("video-show");
 });
 
-// Hero Slider
-var swiper1 = new Swiper(".hero__slider", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
+var swiper = new Swiper(".hero-slider__swiper", {
+  // spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
-    el: ".hero__slider-pagination",
+    el: ".hero-slider__pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".hero__slider-arrow-next",
-    prevEl: ".hero__slider-arrow-next",
+    nextEl: ".hero-slider__next",
+    prevEl: ".hero-slider__prev",
   },
 });
 
