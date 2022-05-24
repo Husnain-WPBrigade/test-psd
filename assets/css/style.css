@@ -385,38 +385,40 @@ a {
 /* --------------------------------- 
 ------------------ title Styles ------------------
 ------------------------------------- */
-.page--title {
+.page-title {
   background: #248142 url("../images/pattern-bg.png");
   overflow: hidden;
 }
 
-.title__content {
+.page-title h2,
+h3 {
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.page-title__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.title__text {
-  font-size: 50px;
-  text-transform: uppercase;
+.skew-reverse {
+  transform: skew(15deg);
 }
 
-.title__reebok-box {
+.page-title__logo-box {
   background: #fff;
-  transform: skew(-15deg);
   padding: 27px 69px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
+  transform: skew(-15deg);
 }
 
-.title__logo-text {
-  transform: translate(-14px, -5px) skew(15deg);
-}
-
-.title__reebok-box::after {
+.page-title__logo-box::after {
   content: "";
   position: absolute;
   background-color: #fff;
@@ -426,30 +428,28 @@ a {
   z-index: 3;
 }
 
-.title__logo-text {
+.page-title__logo {
   color: green;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+  transform: translate(-14px, -5px) skew(15deg);
 }
 
 @media screen and (max-width: 997px) {
-  .title__reebok-box {
+  .page-title__logo-box {
     padding: 18px 62px;
     transform: skew(-18deg);
   }
 
-  .title__logo-text {
-    transform: translate(-8px, -5px) skew(18deg);
-  }
-
-  .title__text {
+  .page-title h2,
+  h3 {
     font-size: 40px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .page--title {
+  .page-title {
     display: none;
   }
 }
