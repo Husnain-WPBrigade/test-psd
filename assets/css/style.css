@@ -959,8 +959,6 @@ h3 {
 .post-card {
   background: #1b7d3b url("../images/pattern-bg.png");
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: 0.3s;
 }
 
@@ -971,21 +969,31 @@ h3 {
 
 .post-card__link {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-card__header {
+  max-height: 162px;
+  min-height: 162px;
+  height: 100%;
 }
 
 .post-card__header img {
   width: 100%;
-  /* height: 100%; */
-  /* object-fit: cover; */
+  height: 100%;
+  object-fit: cover;
   display: block;
   vertical-align: middle;
 }
 
 .post-card__body {
   background: #1b7d3b url("../images/pattern-bg.png");
-  margin: 0;
-  padding: 13px 11px 25px 11px;
+  padding: 13px 11px 0 11px;
   flex: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-card__body h2,
@@ -1003,16 +1011,16 @@ h3 {
 .post-card__body p {
   padding: 0;
   font-size: 14px;
+  margin-bottom: 10px;
   font-family: "Roboto", sans-serif;
 }
 
-.post-card__description {
-  margin-bottom: 10px;
+.post-card__body p:last-of-type {
+  margin-bottom: 30px;
 }
 
 .post-card__btn {
   background: #08512d url("../images/pattern-bg.png");
-  margin: 0;
   padding: 8px;
   font-size: 20px;
   text-transform: uppercase;
@@ -1020,7 +1028,13 @@ h3 {
   text-decoration: none;
   transition: all 0.2s;
   display: inline-block;
-  width: 100%;
+  margin: auto -11px 0 -11px;
+  width: calc(100% + 22px);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-family: "Oswald";
+  cursor: pointer;
 }
 
 .post-card__btn:hover {
@@ -1038,11 +1052,6 @@ h3 {
     gap: 30px;
     margin-top: 40px;
   }
-
-  .post-card__description {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 @media screen and (max-width: 630px) {
@@ -1055,27 +1064,27 @@ h3 {
 /* --------------------------------- 
 ------------------ Showcase Styles ------------------
 ------------------------------------- */
-.showcase__block {
+.showcase-section {
   margin-top: 40px;
 }
 
-.showcase__card {
+.showcase-card {
   background: #1b7d3b url("../images/pattern-bg.png");
   display: flex;
 }
 
-.showcase__header {
+.showcase-card__header {
   width: 60%;
   clip-path: polygon(0% 0%, 100% 0%, 87% 100%, 0% 100%);
 }
 
-.showcase__header img {
+.showcase-card__header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.showcase__body {
+.showcase-card__body {
   background: #1b7d3b url("../images/pattern-bg.png");
   position: relative;
   width: 40%;
@@ -1086,80 +1095,78 @@ h3 {
   flex-direction: column;
 }
 
-.showcase__title {
+.showcase-card__title {
   padding: 0;
   font-size: 20px;
   text-transform: uppercase;
   margin: 0;
-  /* margin-top: 10px; */
   line-height: 1.2;
   margin-bottom: 9px;
 }
 
-.showcase__description {
+.showcase-card__description {
   font-size: 14px;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
   padding: 0;
-  /* margin-top: 10px; */
   margin: 0;
 }
 
-.showcase__card:nth-of-type(even) {
+.showcase-card:nth-of-type(even) {
   flex-direction: row-reverse;
   background-color: #08512d;
 }
 
-.showcase__card:nth-of-type(even) .showcase__body {
+.showcase-card:nth-of-type(even) .showcase-card__body {
   background-color: #08512d;
 }
 
-.showcase__card:nth-of-type(even) .showcase__header {
+.showcase-card:nth-of-type(even) .showcase-card__header {
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 13% 100%);
 }
 
 @media screen and (max-width: 997px) {
-  .showcase__title {
+  .showcase-card__title {
     margin-bottom: 10px;
   }
 
-  .showcase__block {
+  .showcase-section {
     margin-top: 42px;
   }
 
-  .showcase__header {
+  .showcase-card__header {
     width: 55%;
     clip-path: polygon(0% 0%, 100% 0%, 82% 100%, 0% 100%);
   }
 
-  .showcase__body {
+  .showcase-card__body {
     width: 50%;
     padding: 62px 45px 67px 30px;
   }
 
-  .showcase__card:nth-of-type(even) .showcase__header {
+  .showcase-card:nth-of-type(even) .showcase-card__header {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 19% 100%);
   }
 }
 
 @media screen and (max-width: 630px) {
-  .showcase__header {
+  .showcase-card__header {
     width: 100%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  .showcase__card {
+  .showcase-card {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .showcase__card:nth-of-type(even) .showcase__header {
+  .showcase-card:nth-of-type(even) .showcase-card__header {
     width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 
-  .showcase__body {
+  .showcase-card__body {
     width: 100%;
     text-align: left;
     display: flex;
@@ -1167,7 +1174,7 @@ h3 {
     padding: 10px 20px;
   }
 
-  .showcase__card:nth-of-type(even) {
+  .showcase-card:nth-of-type(even) {
     display: flex;
     flex-direction: column;
   }
