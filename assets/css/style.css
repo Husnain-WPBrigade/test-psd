@@ -782,7 +782,7 @@ h3 {
 @media screen and (max-width: 875px) {
   .body-content__wrapper {
     flex-direction: column;
-    width: 95%;
+    /* width: 95%; */
   }
 
   .body-content__left {
@@ -949,52 +949,68 @@ h3 {
 /* --------------------------------- 
 ------------------ Post Card Styles ------------------
 ------------------------------------- */
-.card__block {
+.card-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 38px;
 }
 
-.post__card {
+.post-card {
   background: #1b7d3b url("../images/pattern-bg.png");
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.3s;
 }
 
-.card__header img {
+.post-card:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 1px 20px #012c1f;
+}
+
+.post-card__link {
+  text-decoration: none;
+}
+
+.post-card__header img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* height: 100%; */
+  /* object-fit: cover; */
+  display: block;
+  vertical-align: middle;
 }
 
-.card__body {
+.post-card__body {
   background: #1b7d3b url("../images/pattern-bg.png");
   margin: 0;
-  padding: 13px 11px 18px 11px;
+  padding: 13px 11px 25px 11px;
   flex: auto;
 }
 
-.card__title {
-  margin: 0;
-  padding: 0;
+.post-card__body h2,
+h3 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 10px;
   line-height: 1.2;
 }
 
-.card__description {
-  padding: 0;
-  margin: 0;
+.post-card__title {
   margin-bottom: 10px;
+}
+
+.post-card__body p {
+  padding: 0;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
 }
 
-.card__footer {
+.post-card__description {
+  margin-bottom: 10px;
+}
+
+.post-card__btn {
   background: #08512d url("../images/pattern-bg.png");
   margin: 0;
   padding: 8px;
@@ -1003,48 +1019,36 @@ h3 {
   text-align: center;
   text-decoration: none;
   transition: all 0.2s;
+  display: inline-block;
+  width: 100%;
 }
 
-.card__footer:hover {
+.post-card__btn:hover {
   background-color: #08512d96;
 }
 
 @media screen and (max-width: 1165px) {
-  .card__block {
+  .card-section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 997px) {
-  .card__header {
-    height: 45%;
-  }
-
-  .card__block {
+  .card-section {
     gap: 30px;
     margin-top: 40px;
   }
 
-  .card__description {
+  .post-card__description {
     margin: 0;
     padding: 0;
-  }
-
-  .card__body {
-    padding: 17px 11px 5px 11px;
   }
 }
 
 @media screen and (max-width: 630px) {
-  .card__block {
+  .card-section {
     display: flex;
     flex-direction: column;
-  }
-
-  .card__header {
-    margin-bottom: -3px;
-    /* height: 280px; */
-    height: 100%;
   }
 }
 
@@ -1261,8 +1265,7 @@ h3 {
   padding: 28px 0;
 }
 
-.form-section h2,
-h3 {
+.form-section h2 {
   font-size: 30px;
   text-transform: uppercase;
   margin: 0;
