@@ -783,7 +783,6 @@ h3 {
 @media screen and (max-width: 875px) {
   .body-content__wrapper {
     flex-direction: column;
-    /* width: 95%; */
   }
 
   .body-content__left {
@@ -986,7 +985,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1114,9 +1113,6 @@ h3 {
   line-height: 1.5;
 }
 
-.showcase-card__description {
-}
-
 .showcase-card:nth-of-type(even) {
   flex-direction: row-reverse;
   background-color: #08512d;
@@ -1188,17 +1184,17 @@ h3 {
 /* --------------------------------- 
 ------------------ Event Card Styles ------------------
 ------------------------------------- */
-.event-card {
+.event__card {
   background: #1b7d3b url("../images/pattern-bg.png");
   text-transform: uppercase;
 }
 
-.event-card__header {
+.event__card-header {
   background: #08512d url("../images/pattern-bg.png");
   padding: 8px 20px;
 }
 
-.event-card__title {
+.events__title {
   text-transform: uppercase;
   font-size: 20px;
   padding: 10px;
@@ -1207,17 +1203,17 @@ h3 {
   padding: 0;
 }
 
-.event-card-body {
+.event__card-body {
   padding: 20px 20px 30px 20px;
   counter-reset: event-number;
 }
 
-.event-card-item {
+.event__card-item {
   display: flex;
   align-items: flex-start;
 }
 
-.event-card-item:not(:last-child) {
+.event__card-item:not(:last-child) {
   margin-bottom: 19px;
 }
 
@@ -1247,7 +1243,6 @@ h3 {
 
 .event__body-title {
   font-size: 18px;
-  /* line-height: 2.5; */
   margin: 0;
   padding: 0;
   position: relative;
@@ -1293,7 +1288,6 @@ h3 {
   width: 100%;
   max-width: 540px;
   margin: 14px auto;
-  /* margin-bottom: 0; */
 }
 
 .input-group {
